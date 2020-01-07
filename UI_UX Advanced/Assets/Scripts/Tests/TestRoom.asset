@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a772def2a7267434eb726aa3d71d088f, type: 3}
+  m_Name: TestRoom
+  m_EditorClassIdentifier: 
+  size: 0
+  function: 0
+  availableItems: 
+  reservations:
+  - {fileID: 11400000, guid: 7a8c82468fe689943bb26da477c2332e, type: 2}
+  - {fileID: 11400000, guid: 4706b6da1997e58469e2890ed1622f39, type: 2}
+  - {fileID: 11400000, guid: fd12094e27aaead4d9c50ad327d84be9, type: 2}
