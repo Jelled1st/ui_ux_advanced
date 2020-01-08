@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a772def2a7267434eb726aa3d71d088f, type: 3}
   m_Name: TestRoom
   m_EditorClassIdentifier: 
-  size: 0
-  function: 0
-  availableItems: 
-  reservations:
+  roomNumber: G6.30
+  size: 20
+  function: 1
+  availableItems: 00000000
+  inspectorReservations:
   - {fileID: 11400000, guid: 7a8c82468fe689943bb26da477c2332e, type: 2}
   - {fileID: 11400000, guid: 4706b6da1997e58469e2890ed1622f39, type: 2}
   - {fileID: 11400000, guid: fd12094e27aaead4d9c50ad327d84be9, type: 2}

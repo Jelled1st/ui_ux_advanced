@@ -23,7 +23,7 @@ public class RoomSelector : MonoBehaviour
                 RoomHUD room;
                 if (raycastHit.transform.gameObject.TryGetComponent<RoomHUD>(out room))
                 {
-                    Debug.Log(room.GetReservation(0).ToString());
+                    ui.SelectRoom(room);
                 }
             }
         }

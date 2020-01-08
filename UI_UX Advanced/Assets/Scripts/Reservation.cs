@@ -19,6 +19,20 @@ public class Reservation : ScriptableObject , IComparable
     public int endDateHour = DateTime.Now.Hour;
     public int endDateMinute = DateTime.Now.Minute;
 
+    public Reservation(DateTime pStart, DateTime pEnd)
+    {
+        madeBy = "";
+        startTime = pStart;
+        endTime = pEnd;
+    }
+
+    public Reservation(string pBy, DateTime pStart, DateTime pEnd)
+    {
+        madeBy = pBy;
+        startTime = pStart;
+        endTime = pEnd;
+    }
+
     public bool Init()
     {
         startTime = new DateTime(startDateYear, startDateMonth, startDateDay, startDateHour, startDateMinute, 0);
@@ -132,14 +146,19 @@ public class Reservation : ScriptableObject , IComparable
     {
         Debug.Log("before copy: " + startTime.ToString() + " End " + endTime.ToString());
 
-        Reservation reservation = new Reservation();
-        reservation.startTime = new DateTime(startTime.Year, startTime.Month, startTime.Day, startTime.Hour, startTime.Minute, startTime.Second);
-        reservation.endTime = new DateTime(endTime.Year, endTime.Month, endTime.Day, endTime.Hour, endTime.Minute, endTime.Second);
-        reservation.madeBy = madeBy;
+        DateTime start = new DateTime(startTime.Year, startTime.Month, startTime.Day, startTime.Hour, startTime.Minute, startTime.Second);
+        DateTime end = new DateTime(endTime.Year, endTime.Month, endTime.Day, endTime.Hour, endTime.Minute, endTime.Second);
+        
+        Reservation reservation = new Reservation(madeBy, start, end);
 
         Debug.Log("Copy: " + reservation.startTime.ToString() + " End " + reservation.endTime.ToString());
 
         return reservation;
+    }
+
+    static public String TimeToString(DateTime datetime)
+    {
+        return "" + datetime.Hour + ":" + datetime.Minute;
     }
 
     public int CompareTo(object obj)

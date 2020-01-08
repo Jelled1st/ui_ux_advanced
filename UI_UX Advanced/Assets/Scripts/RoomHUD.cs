@@ -15,10 +15,6 @@ public class RoomHUD : MonoBehaviour
         }
         else
         {
-            for(int i = 0; i < room.reservations.Count; i++)
-            {
-                room.reservations[i].Init();
-            }
             room = room.Copy();
             room.Init();
         }
@@ -30,22 +26,22 @@ public class RoomHUD : MonoBehaviour
         
     }
     
-    public List<Reservation> GetReservations()
+    public List<Reservation> GetReservationsForDate(DateTime pDate)
     {
-        return room.reservations;
+        if (room.reservations.ContainsKey(pDate)) return room.reservations[pDate];
+        else return null;
     }
 
     public Reservation GetReservation(DateTime pDateTime)
     {
-        for(int i = 0; i < room.reservations.Count; i++)
+        DateTime date = pDateTime.Date;
+        if(room.reservations.ContainsKey(date))
         {
-            if (room.reservations[i].startTime == pDateTime) return room.reservations[i];
+            for(int i = 0; i < room.reservations[date].Count; i++)
+            {
+                if (room.reservations[date][i].startTime == pDateTime) return room.reservations[date][i];
+            }
         }
         return null;
-    }
-
-    public Reservation GetReservation(int index)
-    {
-        return room.reservations[index];
     }
 }

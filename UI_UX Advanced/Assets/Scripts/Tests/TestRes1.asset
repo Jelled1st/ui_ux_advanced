@@ -15,11 +15,11 @@ MonoBehaviour:
   madeBy: Jelle
   startDateYear: 2020
   startDateMonth: 1
-  startDateDay: 4
+  startDateDay: 8
   startDateHour: 10
   startDateMinute: 15
   endDateYear: 2020
   endDateMonth: 1
-  endDateDay: 4
+  endDateDay: 8
   endDateHour: 12
   endDateMinute: 0

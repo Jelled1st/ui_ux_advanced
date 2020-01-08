@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16c8b16da943ab748a93ba5fc88c468e, type: 3}
-  m_Name: TestRes2 [Wrong]
+  m_Name: TestRes2
   m_EditorClassIdentifier: 
   madeBy: Jelle
   startDateYear: 2020
   startDateMonth: 1
-  startDateDay: 4
-  startDateHour: 12
-  startDateMinute: 0
+  startDateDay: 8
+  startDateHour: 13
+  startDateMinute: 30
   endDateYear: 2020
   endDateMonth: 1
-  endDateDay: 4
-  endDateHour: 11
-  endDateMinute: 30
+  endDateDay: 8
+  endDateHour: 15
+  endDateMinute: 0
