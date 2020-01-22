@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public enum RoomFunction
+public enum RoomSize
 {
-    STANDARD = 0,
-    OPENWORKSPACE,
-    TECHNICAL,
+    TEAMSIZE = 0,
+    LABSIZE = 1,
+    LECTURESIZE = 2,
 }
 
 public enum RoomItems
@@ -47,8 +47,7 @@ public class Room : ScriptableObject
     }
 
     public String roomNumber;
-    public int size;
-    public RoomFunction function;
+    public RoomSize size = RoomSize.LABSIZE;
     public List<RoomItems> availableItems;
     public List<Reservation> inspectorReservations;
     public Dictionary<DateTime, List<Reservation>> reservations;
@@ -58,7 +57,6 @@ public class Room : ScriptableObject
         Room room = new Room();
         room.roomNumber = roomNumber;
         room.size = size;
-        room.function = function;
         room.availableItems = new List<RoomItems>(availableItems);
         if(inspectorReservations != null) room.inspectorReservations = new List<Reservation>(inspectorReservations);
         if(reservations != null) room.reservations = new Dictionary<DateTime, List<Reservation>>(reservations);
