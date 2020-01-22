@@ -144,21 +144,12 @@ public class Reservation : ScriptableObject , IComparable
 
     public Reservation Copy()
     {
-        Debug.Log("before copy: " + startTime.ToString() + " End " + endTime.ToString());
-
         DateTime start = new DateTime(startTime.Year, startTime.Month, startTime.Day, startTime.Hour, startTime.Minute, startTime.Second);
         DateTime end = new DateTime(endTime.Year, endTime.Month, endTime.Day, endTime.Hour, endTime.Minute, endTime.Second);
         
         Reservation reservation = new Reservation(madeBy, start, end);
 
-        Debug.Log("Copy: " + reservation.startTime.ToString() + " End " + reservation.endTime.ToString());
-
         return reservation;
-    }
-
-    static public String TimeToString(DateTime datetime)
-    {
-        return "" + datetime.Hour + ":" + datetime.Minute;
     }
 
     public int CompareTo(object obj)
@@ -167,12 +158,6 @@ public class Reservation : ScriptableObject , IComparable
         {
             Reservation rObj = (Reservation)obj;
             return this.startTime.CompareTo(rObj.startTime);
-            //int retV = 0;
-            //string time = "" + startTime.Hour + "" + startTime.Minute;
-            //return Int32.Parse(time);
-            //if (startTime > rObj.startTime) retV = 0;
-            //else retV = 1;
-            //return retV;
         }
         else return 0;
         throw new NotImplementedException();

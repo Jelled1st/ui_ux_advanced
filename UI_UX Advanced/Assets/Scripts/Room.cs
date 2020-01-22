@@ -56,7 +56,6 @@ public class Room : ScriptableObject
     public Room Copy()
     {
         Room room = new Room();
-        Debug.Log(roomNumber);
         room.roomNumber = roomNumber;
         room.size = size;
         room.function = function;

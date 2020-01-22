@@ -17,7 +17,7 @@ MonoBehaviour:
   startDateMonth: 1
   startDateDay: 8
   startDateHour: 10
-  startDateMinute: 15
+  startDateMinute: 10
   endDateYear: 2020
   endDateMonth: 1
   endDateDay: 8
