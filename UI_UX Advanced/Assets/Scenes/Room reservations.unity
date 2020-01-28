@@ -130,7 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 69089205}
   - component: {fileID: 69089204}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Extra_Options
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 107527967}
   - component: {fileID: 107527968}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Building_Drop_Down_Options
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,7 +290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 112424585}
   - component: {fileID: 112424584}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Lecture_Size
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 146487740}
   - component: {fileID: 146487739}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Time_Text_Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 163819283}
   - component: {fileID: 163819282}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Preffered_Floor_Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,7 +531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 206021820}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Room Size
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -565,7 +565,7 @@ GameObject:
   m_Component:
   - component: {fileID: 223902610}
   - component: {fileID: 223902609}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Quick_Reservation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -645,7 +645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 244330099}
   - component: {fileID: 244330098}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Toggle_Options
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -725,7 +725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 294053007}
   - component: {fileID: 294053008}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Arrow_Building-002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -805,7 +805,7 @@ GameObject:
   m_Component:
   - component: {fileID: 298845860}
   - component: {fileID: 298845861}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Building_Down_Button (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -885,7 +885,7 @@ GameObject:
   m_Component:
   - component: {fileID: 299603499}
   - component: {fileID: 299603500}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Arrow_Building-003 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -965,7 +965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 307850370}
   - component: {fileID: 307850369}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Arrow_Preffered_Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1045,7 +1045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 358290890}
   - component: {fileID: 358290889}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Smartboard_off
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1125,7 +1125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 359389224}
   - component: {fileID: 359389223}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1204,7 +1204,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 398058088}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Work Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1219,8 +1219,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398058087}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -512, y: -384, z: -1.5}
-  m_LocalScale: {x: 200, y: 200, z: 200}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children:
   - {fileID: 1914280711}
   - {fileID: 223902610}
@@ -1228,7 +1228,7 @@ Transform:
   - {fileID: 1878428715}
   - {fileID: 1782186251}
   m_Father: {fileID: 1730852918}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &414897605
 GameObject:
@@ -1239,7 +1239,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 414897606}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Preffered Floor Drop Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1274,7 +1274,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 443688370}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Toggles Off
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1308,7 +1308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 528114959}
   - component: {fileID: 528114958}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Date_Text_Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1388,7 +1388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 556203795}
   - component: {fileID: 556203796}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Room_Size_Arrow-001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1468,7 +1468,7 @@ GameObject:
   m_Component:
   - component: {fileID: 559667498}
   - component: {fileID: 559667499}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Preffered_Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1548,7 +1548,7 @@ GameObject:
   m_Component:
   - component: {fileID: 563964889}
   - component: {fileID: 563964888}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Building_Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1695,11 +1695,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579726850}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1000}
+  m_LocalPosition: {x: 960, y: 540, z: -1000}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1730852918}
-  m_RootOrder: 3
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &579984371
 GameObject:
@@ -1711,7 +1711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 579984372}
   - component: {fileID: 579984373}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Arrow_Room_Size
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1791,7 +1791,7 @@ GameObject:
   m_Component:
   - component: {fileID: 603435396}
   - component: {fileID: 603435395}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Prefferedn_FLoor_Drop_Down_Options
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1870,7 +1870,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 647794228}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1905,7 +1905,7 @@ GameObject:
   m_Component:
   - component: {fileID: 649948789}
   - component: {fileID: 649948790}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Lab_Sized
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1985,7 +1985,7 @@ GameObject:
   m_Component:
   - component: {fileID: 736552161}
   - component: {fileID: 736552160}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Extra_Options_tab_Unopenned
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2065,7 +2065,7 @@ GameObject:
   m_Component:
   - component: {fileID: 737631451}
   - component: {fileID: 737631450}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Epy_Drost_[G]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2147,7 +2147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 737978760}
   - component: {fileID: 737978759}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2227,7 +2227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 743832276}
   - component: {fileID: 743832275}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Room_Reservation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2307,7 +2307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 759330264}
   - component: {fileID: 759330263}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Preffered_Floor-001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2387,7 +2387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 795823994}
   - component: {fileID: 795823993}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: 20Feb2020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2466,7 +2466,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 824096349}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Tab 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2546,7 +2546,7 @@ MonoBehaviour:
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -2562,8 +2562,8 @@ Canvas:
   m_GameObject: {fileID: 826340630}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 579726852}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -2604,7 +2604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 863052441}
   - component: {fileID: 863052440}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: shader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2683,7 +2683,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 882148460}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Preffered Floor Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2717,7 +2717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 917724238}
   - component: {fileID: 917724237}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: menu_bar_1920_x_50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2797,7 +2797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 925743089}
   - component: {fileID: 925743088}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Date_Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2877,7 +2877,7 @@ GameObject:
   m_Component:
   - component: {fileID: 981430077}
   - component: {fileID: 981430078}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Room_Size
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3032,11 +3032,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029292135}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: -512, y: -381, z: 0}
+  m_LocalPosition: {x: 448, y: 159, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1730852918}
-  m_RootOrder: 4
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1122717692
 GameObject:
@@ -3048,7 +3048,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1122717694}
   - component: {fileID: 1122717693}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Computer_On
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3128,7 +3128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1131965774}
   - component: {fileID: 1131965773}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Help_Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3208,7 +3208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1170976220}
   - component: {fileID: 1170976221}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Building_Bar (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3287,7 +3287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1174403102}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3302,13 +3302,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174403101}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -512, y: -384, z: 3}
-  m_LocalScale: {x: 200, y: 200, z: 200}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children:
   - {fileID: 1922767041}
   - {fileID: 863052441}
   m_Father: {fileID: 1730852918}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1212057894
 GameObject:
@@ -3320,7 +3320,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1212057895}
   - component: {fileID: 1212057896}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Arrow_Building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3399,7 +3399,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1212467460}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Toggles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3432,7 +3432,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1301093228}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Extra Options Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3465,7 +3465,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1309210570}
   - component: {fileID: 1309210569}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: User_Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3544,7 +3544,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1342885334}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Date
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3580,7 +3580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1374818567}
   - component: {fileID: 1374818566}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Quick_Reservation_Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3660,7 +3660,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1390553145}
   - component: {fileID: 1390553144}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Building_drop_down_BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3740,7 +3740,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1423881054}
   - component: {fileID: 1423881053}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: 0800_-_1700
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3820,7 +3820,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1488077336}
   - component: {fileID: 1488077337}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: workarea_1720_x_830
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3899,7 +3899,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1573804806}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3933,7 +3933,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1575028817}
   - component: {fileID: 1575028816}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4012,7 +4012,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1620322559}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Building Drop Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4047,7 +4047,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1680649511}
   - component: {fileID: 1680649510}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Calender_Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4127,7 +4127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1689194638}
   - component: {fileID: 1689194637}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Time_Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4207,7 +4207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1705132450}
   - component: {fileID: 1705132449}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Devider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4304,20 +4304,18 @@ RectTransform:
   m_GameObject: {fileID: 1730852917}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children:
+  - {fileID: 1174403102}
   - {fileID: 398058088}
   - {fileID: 1815647735}
-  - {fileID: 1174403102}
-  - {fileID: 579726853}
-  - {fileID: 1029292137}
   m_Father: {fileID: 826340634}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1730852919
 MonoBehaviour:
@@ -4365,7 +4363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1748495932}
   - component: {fileID: 1748495931}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Extra_Options_tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4445,7 +4443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1748969370}
   - component: {fileID: 1748969369}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Room_Size_Drop_Down_BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4529,7 +4527,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1782186251}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Workspace Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4564,7 +4562,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1815647735}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4579,15 +4577,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1815647734}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -512, y: -384, z: -1}
-  m_LocalScale: {x: 200, y: 200, z: 200}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children:
   - {fileID: 917724238}
   - {fileID: 737978760}
   - {fileID: 1131965774}
   - {fileID: 1309210570}
   m_Father: {fileID: 1730852918}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1826157914
 GameObject:
@@ -4599,7 +4597,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1826157916}
   - component: {fileID: 1826157915}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: header
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4678,7 +4676,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1878428715}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Tab 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4710,7 +4708,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1903372404}
   - component: {fileID: 1903372403}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Arrow_Room_Size-001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4790,7 +4788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1906247044}
   - component: {fileID: 1906247043}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Room_Size-001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4870,7 +4868,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1907894088}
   - component: {fileID: 1907894087}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Rectangle_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4950,7 +4948,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1910387387}
   - component: {fileID: 1910387386}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Room_Size_Arrow-001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5030,7 +5028,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1914280711}
   - component: {fileID: 1914280710}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Search
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5110,7 +5108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1922767041}
   - component: {fileID: 1922767040}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5190,7 +5188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1924441041}
   - component: {fileID: 1924441040}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Date
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5270,7 +5268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1934100384}
   - component: {fileID: 1934100383}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Beamer_Off
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5416,7 +5414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1971453869}
   - component: {fileID: 1971453870}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Team_Sized
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5496,7 +5494,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1975996289}
   - component: {fileID: 1975996290}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Lecture_Sized
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5576,7 +5574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1988364394}
   - component: {fileID: 1988364393}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Building_Down_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5655,7 +5653,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1995415840}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Extra Options Openned
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5693,7 +5691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2016366473}
   - component: {fileID: 2016366472}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Smartboard_On
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5773,7 +5771,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2020846497}
   - component: {fileID: 2020846496}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Arrow_Building-001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5853,7 +5851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2023898503}
   - component: {fileID: 2023898504}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Room_Size_Bar-001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5933,7 +5931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2035669091}
   - component: {fileID: 2035669090}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Room_Size_Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6012,7 +6010,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2054563987}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Toggles On
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6046,7 +6044,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2057791555}
   - component: {fileID: 2057791554}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Beamer_On
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6126,7 +6124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2068297890}
   - component: {fileID: 2068297891}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Preffered_Floors_Drop_Down_BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6206,7 +6204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2089642748}
   - component: {fileID: 2089642747}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Computer_Off
   m_TagString: Untagged
   m_Icon: {fileID: 0}
