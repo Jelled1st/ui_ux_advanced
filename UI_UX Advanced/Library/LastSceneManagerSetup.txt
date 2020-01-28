@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Nathalie's scene (sceme 4 the results page).unity
+- path: Assets/Scenes/Login screen (brandon).unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
