@@ -14,4 +14,19 @@ public class ButtonInput : MonoBehaviour
     {
         SceneManager.LoadScene(scene);
     }
+
+    public void TurnGameObjectOn(GameObject go)
+    {
+        go.SetActive(true);
+    }
+
+    public void TurnGameObjectOff(GameObject go)
+    {
+        go.SetActive(false);
+    }
+
+    public void SwichActiveState(GameObject go)
+    {
+        go.SetActive(!go.activeSelf);
+    }
 }

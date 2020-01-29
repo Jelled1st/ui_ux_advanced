@@ -4,5 +4,32 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Login screen (brandon).unity
+    guid: 733114dacb5ba59488686b8bbff95660
+  - enabled: 1
+    path: Assets/Scenes/Room reservations.unity
+    guid: 4892ede33fee7d546956b7ee6f498524
+  - enabled: 1
+    path: Assets/Scenes/Nathalie's scene (sceme 4 the results page).unity
+    guid: 9be260b0d95dcef40ad7951eb85c3c82
+  - enabled: 1
+    path: Assets/Scenes/my reservations stefania.unity
+    guid: cc7ffa0e45239d248a8067114a2f2d3e
+  - enabled: 1
+    path: Assets/Scenes/Help(slide in).unity
+    guid: 491ce003e2744fa46a0a5df0470ffc41
+  - enabled: 1
+    path: Assets/Scenes/Profile(slide in).unity
+    guid: ce6b328bf04d58b4db14ae4d2e25f8ad
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 0
+    path: Assets/Scenes/Tests.unity
+    guid: 4787029e458d11040b288ff8ff8a6db8
+  - enabled: 0
+    path: Assets/Scenes/Main Layout (brandon).unity
+    guid: 86dc6faf0c5882a4699a9607133af554
   m_configObjects: {}

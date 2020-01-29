@@ -13,8 +13,18 @@ public enum RoomSize
 public enum RoomItems
 {
     BEAMER,
+    COMPUTERS,
+    SMARTBOARD,
     SOLDERINGSTATION,
     WOODWORKINGITEMS,
+}
+
+public enum Building
+{
+    ANY,
+    EPYDROST,
+    FORUM,
+    WOLVECAMP,
 }
 
 [CreateAssetMenu(fileName = "RoomObject", menuName = "ScriptableObjects/Room", order = 1)]
@@ -51,12 +61,16 @@ public class Room : ScriptableObject
     public List<RoomItems> availableItems;
     public List<Reservation> inspectorReservations;
     public Dictionary<DateTime, List<Reservation>> reservations;
+    public Building building;
+    public int floor = 0;
 
     public Room Copy()
     {
         Room room = new Room();
         room.roomNumber = roomNumber;
         room.size = size;
+        room.building = building;
+        room.floor = floor;
         room.availableItems = new List<RoomItems>(availableItems);
         if(inspectorReservations != null) room.inspectorReservations = new List<Reservation>(inspectorReservations);
         if(reservations != null) room.reservations = new Dictionary<DateTime, List<Reservation>>(reservations);
