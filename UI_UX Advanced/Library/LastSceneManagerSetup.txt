@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Room reservations.unity
+- path: Assets/Scenes/my reservations stefania.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
