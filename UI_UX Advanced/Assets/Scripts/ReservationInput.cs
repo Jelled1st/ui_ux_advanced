@@ -34,6 +34,10 @@ public class ReservationInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            PassReservationToHandler();
+        }
     }
 
     public void OnSearch()
@@ -49,6 +53,21 @@ public class ReservationInput : MonoBehaviour
             if (Smartboard.activeSelf) requiredItems.Add(RoomItems.SMARTBOARD);
             CompleteHandler.GetInstance().SetReservation(res, roomSize, building, floor-1, requiredItems);
             SceneManager.LoadScene("Nathalie's scene (sceme 4 the results page)");
+        }
+    }
+
+    public void PassReservationToHandler()
+    {
+        DateTime start;
+        DateTime end;
+        if (GetDateTimeFromText(out start) && GetEndDateTimeFromText(out end))
+        {
+            Reservation res = new Reservation("You", start, end);
+            List<RoomItems> requiredItems = new List<RoomItems>();
+            if (beamer.activeSelf) requiredItems.Add(RoomItems.BEAMER);
+            if (Computers.activeSelf) requiredItems.Add(RoomItems.COMPUTERS);
+            if (Smartboard.activeSelf) requiredItems.Add(RoomItems.SMARTBOARD);
+            CompleteHandler.GetInstance().SetReservation(res, roomSize, building, floor - 1, requiredItems);
         }
     }
 
