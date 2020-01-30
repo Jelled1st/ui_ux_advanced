@@ -141,6 +141,23 @@ public class Room : ScriptableObject
         return output;
     }
 
+    public static string RoomSizeToString(RoomSize roomSize)
+    {
+        switch(roomSize)
+        {
+            case RoomSize.ANY:
+                return "Labroom";
+            case RoomSize.LABSIZE:
+                return "Labroom";
+            case RoomSize.LECTURESIZE:
+                return "Lecture room";
+            case RoomSize.TEAMSIZE:
+                return "Team room";
+            default:
+                return "Labroom";
+        }
+    }
+
     public override String ToString()
     {
         return "Room " + roomNumber + " with size " + size;

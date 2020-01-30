@@ -9,7 +9,7 @@ public class CompleteHandler : MonoBehaviour
 
     [SerializeField] List<Room> rooms;
 
-    Reservation reservationInput;
+    Reservation requestedReservation;
     RoomSize reservationRoomSize;
     List<RoomItems> reservationItems;
     Building reservationBuilding;
@@ -43,13 +43,14 @@ public class CompleteHandler : MonoBehaviour
 
     public void SetReservation(Reservation res, RoomSize size = RoomSize.LABSIZE, Building building = Building.ANY, int floor = -1, List<RoomItems> requiredItems = null)
     {
-        reservationInput = res;
+        requestedReservation = res;
         reservationRoomSize = size;
         if (requiredItems == null) requiredItems = new List<RoomItems>();
         reservationItems = requiredItems;
         reservationBuilding = building;
         this.reservationFloor = floor;
-        Debug.Log("Set reservation: " + reservationInput.ToString());
+        Debug.Log("Set reservation: " + requestedReservation.ToString());
+        FindSuitableReservations();
     }
 
     public void FindSuitableReservations()
@@ -95,7 +96,7 @@ public class CompleteHandler : MonoBehaviour
             suitableRooms.Add(room);
 
             if (rooms[i].reservations == null) Debug.Log("debug statement");
-            List<Reservation> availableTimes = rooms[i].GetAvailableReservationsForDate(reservationInput.startTime.Date);
+            List<Reservation> availableTimes = rooms[i].GetAvailableReservationsForDate(requestedReservation.startTime.Date);
 
             if (availableTimes == null || availableTimes.Count <= 0)
             {
@@ -105,10 +106,10 @@ public class CompleteHandler : MonoBehaviour
             }
             for (int j = 0; j < availableTimes.Count; ++j)
             {
-                if (availableTimes[j].startTime <= reservationInput.startTime)
+                if (availableTimes[j].startTime <= requestedReservation.startTime)
                 {
                     Debug.Log("start time should be correct");
-                    if (availableTimes[j].endTime >= reservationInput.endTime)
+                    if (availableTimes[j].endTime >= requestedReservation.endTime)
                     {
                         Debug.Log("so is endtime");
                         DateTime start = availableTimes[j].startTime;
@@ -127,6 +128,16 @@ public class CompleteHandler : MonoBehaviour
                 suitableRooms.Remove(room);
             }
         }
+    }
+
+    public Reservation GetRequestedReservation()
+    {
+        return requestedReservation;
+    }
+
+    public List<Room> GetAvailableRooms()
+    {
+        return suitableRooms;
     }
 
     public static CompleteHandler GetInstance()

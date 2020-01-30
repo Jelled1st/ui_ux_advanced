@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Login screen (brandon).unity
-    guid: 733114dacb5ba59488686b8bbff95660
+    path: Assets/Scenes/login screen.unity
+    guid: 8a7d6b69d77e44448a5186cfb47a4ef2
   - enabled: 1
     path: Assets/Scenes/Room reservations.unity
     guid: 4892ede33fee7d546956b7ee6f498524
