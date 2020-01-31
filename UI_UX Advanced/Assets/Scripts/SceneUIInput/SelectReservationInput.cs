@@ -2,22 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 public class SelectReservationInput : MonoBehaviour
 {
     const float sliderPrecisionDevider = 7.0f;
-    const float sliderPrecisionOverlap = 3.0f;
+    const float sliderPrecisionOverlap = 30.0f;
 
     [SerializeField] Text dayDateText;
     [SerializeField] Text timeText;
     [SerializeField] Text roomText;
     [SerializeField] Text roomSizeText;
-    [SerializeField] GameObject sliderLowest;
-    [SerializeField] GameObject sliderHighest;
+    [FormerlySerializedAs("sliderLowest")] [SerializeField] GameObject sliderLow;
+    [FormerlySerializedAs("sliderHighest")] [SerializeField] GameObject sliderHigh;
     [SerializeField] RectTransform selectedTime;
+    RectTransform sliderLowRect;
+    RectTransform sliderHighRect;
     Reservation requestedReservation;
     List<Room> availableRooms;
     GameObject selectedSlider = null;
+    RectTransform selectedSliderRect = null;
     Vector2 mousePos;
 
     // Start is called before the first frame update
@@ -26,6 +30,9 @@ public class SelectReservationInput : MonoBehaviour
         requestedReservation = CompleteHandler.GetInstance().GetRequestedReservation();
         SetTextDateTime(requestedReservation);
         availableRooms = CompleteHandler.GetInstance().GetAvailableRooms();
+
+        if (sliderLow != null) sliderLowRect = sliderLow.GetComponent<RectTransform>();
+        if (sliderHigh != null) sliderHighRect = sliderHigh.GetComponent<RectTransform>();
     }
 
     // Update is called once per frame
@@ -42,15 +49,17 @@ public class SelectReservationInput : MonoBehaviour
             RaycastHit hit;
             if (selectedSlider == null && Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
-                if (hit.transform.gameObject == sliderLowest)
+                if (hit.transform.gameObject == sliderLow)
                 {
                     mousePos = Input.mousePosition;
-                    selectedSlider = sliderLowest;
+                    selectedSlider = sliderLow;
+                    selectedSliderRect = sliderLowRect;
                 }
-                else if (hit.transform.gameObject == sliderHighest)
+                else if (hit.transform.gameObject == sliderHigh)
                 {
                     mousePos = Input.mousePosition;
-                    selectedSlider = sliderHighest;
+                    selectedSlider = sliderHigh;
+                    selectedSliderRect = sliderHighRect;
                 }
             }
 
@@ -60,20 +69,22 @@ public class SelectReservationInput : MonoBehaviour
                 Vector2 mouseMove = newMouse - mousePos;
                 Debug.Log(mouseMove.ToString());
                 mousePos = newMouse;
-                selectedSlider.transform.position = selectedSlider.transform.position + new Vector3(mouseMove.x/ sliderPrecisionDevider, 0, 0);
+                selectedSliderRect.localPosition = selectedSliderRect.localPosition + new Vector3(mouseMove.x*1.25f, 0, 0);
             }
 
             //make sure end does not end up in front of front and vice versa
-            if (sliderLowest.transform.position.x > sliderHighest.transform.position.x - sliderPrecisionOverlap)
+            if (sliderLow == selectedSlider && sliderLowRect.localPosition.x > sliderHighRect.localPosition.x - sliderPrecisionOverlap)
             {
-                sliderLowest.transform.position = new Vector3(sliderHighest.transform.position.x - sliderPrecisionOverlap, sliderLowest.transform.position.y, sliderLowest.transform.position.z);
+                sliderLowRect.localPosition = new Vector3(sliderHighRect.localPosition.x - sliderPrecisionOverlap, sliderLowRect.localPosition.y, sliderLowRect.localPosition.z);
             }
-            if (sliderHighest.transform.position.x < sliderLowest.transform.position.x+ sliderPrecisionOverlap)
+            if (sliderHigh == selectedSlider && sliderHighRect.localPosition.x < sliderLowRect.localPosition.x + sliderPrecisionOverlap)
             {
-                sliderHighest.transform.position = new Vector3(sliderLowest.transform.position.x+ sliderPrecisionOverlap, sliderHighest.transform.position.y, sliderHighest.transform.position.z);
+                sliderHighRect.localPosition = new Vector3(sliderLowRect.localPosition.x + sliderPrecisionOverlap, sliderHighRect.localPosition.y, sliderHighRect.localPosition.z);
             }
-
-            selectedTime.sizeDelta = new Vector2((sliderHighest.transform.position.x - sliderLowest.transform.position.x)*10, selectedTime.sizeDelta.y);
+            float width = sliderHighRect.localPosition.x - sliderLowRect.localPosition.x - (sliderPrecisionOverlap);
+            Debug.Log("new width is " + width);
+            selectedTime.sizeDelta = new Vector2(width, selectedTime.sizeDelta.y);
+            selectedTime.localPosition = new Vector3(sliderLowRect.localPosition.x + width/2+sliderPrecisionOverlap/2, selectedTime.localPosition.y, selectedTime.localPosition.z );
             
         }
         else selectedSlider = null;
