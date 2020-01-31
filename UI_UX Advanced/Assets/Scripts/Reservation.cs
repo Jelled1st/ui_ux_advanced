@@ -160,6 +160,5 @@ public class Reservation : ScriptableObject , IComparable
             return this.startTime.CompareTo(rObj.startTime);
         }
         else return 0;
-        throw new NotImplementedException();
     }
 }

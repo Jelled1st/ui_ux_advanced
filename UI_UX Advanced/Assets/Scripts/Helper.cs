@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -35,5 +35,15 @@ public static class Helper
             default:
                 return "" + month;
         }
+    }
+
+    public static void SetDateInDateTime(DateTime dateTime, int year, int month, int day)
+    {
+        dateTime = new DateTime(year, month, day, dateTime.Hour, dateTime.Minute, dateTime.Second);
+    }
+
+    public static void SetTimeInDateTime(DateTime dateTime, int hour, int min, int sec)
+    {
+        dateTime = new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, hour, min, sec);
     }
 }
