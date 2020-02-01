@@ -20,6 +20,7 @@ public class CompleteHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (instance != null) Destroy(this);
         for(int i = 0; i < rooms.Count; ++i)
         {
             rooms[i].Init();

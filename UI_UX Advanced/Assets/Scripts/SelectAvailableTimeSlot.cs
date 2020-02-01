@@ -14,6 +14,7 @@ public class SelectAvailableTimeSlot : MonoBehaviour
     void Start()
     {
         availableTimeViews = new List<AvailableTimeView>();
+        LoadTimeSlots();
     }
 
     // Update is called once per frame
