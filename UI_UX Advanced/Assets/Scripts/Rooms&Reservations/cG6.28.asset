@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: cG6.28
   m_EditorClassIdentifier: 
   roomNumber: G6.28
-  size: 1
+  size: 2
   availableItems: 0000000001000000
   inspectorReservations:
   - {fileID: 11400000, guid: 62399039cd46d5949b1ae831fa3e6f62, type: 2}
   - {fileID: 11400000, guid: 9a00f3a06e8fee94d8db704e401da8aa, type: 2}
+  building: 1
+  floor: 6

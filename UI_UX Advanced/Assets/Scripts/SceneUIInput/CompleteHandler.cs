@@ -37,7 +37,7 @@ public class CompleteHandler : MonoBehaviour
         {
             DateTime start = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 10, 30, 0);
             DateTime end = start.AddHours(1);
-            SetReservation(new Reservation("VRZ", start, end));
+            SetReservation(new Reservation("VRZ", start, end), RoomSize.ANY);
         }
     }
 
@@ -94,24 +94,20 @@ public class CompleteHandler : MonoBehaviour
             room.inspectorReservations = new List<Reservation>();
             room.reservations = new Dictionary<DateTime, List<Reservation>>();
             suitableRooms.Add(room);
-
-            if (rooms[i].reservations == null) Debug.Log("debug statement");
+            
             List<Reservation> availableTimes = rooms[i].GetAvailableReservationsForDate(requestedReservation.startTime.Date);
 
             if (availableTimes == null || availableTimes.Count <= 0)
             {
                 suitableRooms.Remove(room);
-                Debug.Log("skipping adding available times");
                 continue;
             }
             for (int j = 0; j < availableTimes.Count; ++j)
             {
                 if (availableTimes[j].startTime <= requestedReservation.startTime)
                 {
-                    Debug.Log("start time should be correct");
                     if (availableTimes[j].endTime >= requestedReservation.endTime)
                     {
-                        Debug.Log("so is endtime");
                         DateTime start = availableTimes[j].startTime;
                         if (!room.reservations.ContainsKey(availableTimes[j].startTime.Date))
                         { 
@@ -135,6 +131,11 @@ public class CompleteHandler : MonoBehaviour
         return requestedReservation;
     }
 
+    public DateTime GetRequestedDate()
+    {
+        return requestedReservation.startTime.Date;
+    }
+
     public List<Room> GetAvailableRooms()
     {
         return suitableRooms;
@@ -147,5 +148,16 @@ public class CompleteHandler : MonoBehaviour
             instance = new CompleteHandler();
         }
         return instance;
+    }
+
+    public Room GetRoomWithNumber(string nr)
+    {
+        Debug.Log("looking for: " + nr);
+        for (int i = 0; i < rooms.Count; ++i)
+        {
+            Debug.Log("found: " + rooms[i].roomNumber);
+            if (rooms[i].roomNumber == nr) return rooms[i];
+        }
+        return null;
     }
 }

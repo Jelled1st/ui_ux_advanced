@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: cS0.47
   m_EditorClassIdentifier: 
   roomNumber: S0.47
-  size: 2
+  size: 3
   availableItems: 00000000
   inspectorReservations:
   - {fileID: 11400000, guid: f404fb55da7c84c43a9a4475a4e3fd07, type: 2}
   - {fileID: 11400000, guid: 16cb3ffc39e62ea4591bfbfbd4ef487e, type: 2}
+  building: 0
+  floor: 0

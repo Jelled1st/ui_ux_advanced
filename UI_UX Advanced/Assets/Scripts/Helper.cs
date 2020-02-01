@@ -46,4 +46,20 @@ public static class Helper
     {
         dateTime = new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, hour, min, sec);
     }
+
+    public static string HourMinToString(int hour, int min)
+    {
+        string ret;
+
+        if(min < 10)
+        {
+            ret = "" + hour + ":0" + min;
+        }
+        else
+        {
+            ret = "" + hour + ":" + min;
+        }
+
+        return ret;
+    }
 }

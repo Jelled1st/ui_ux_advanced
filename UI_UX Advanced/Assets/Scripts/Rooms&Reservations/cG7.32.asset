@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a772def2a7267434eb726aa3d71d088f, type: 3}
   m_Name: cG7.32
   m_EditorClassIdentifier: 
-  roomNumber: G2.29
-  size: 0
+  roomNumber: G7.32
+  size: 1
   availableItems: 
-  inspectorReservations: []
+  inspectorReservations:
+  - {fileID: 11400000, guid: f404fb55da7c84c43a9a4475a4e3fd07, type: 2}
+  - {fileID: 11400000, guid: 62399039cd46d5949b1ae831fa3e6f62, type: 2}
+  - {fileID: 11400000, guid: fb19d3ba30c3725479c1b7b5806b2ee4, type: 2}
+  building: 1
+  floor: 7
