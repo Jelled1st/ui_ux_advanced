@@ -15,7 +15,10 @@ public class CompleteHandler : MonoBehaviour
     Building reservationBuilding;
     int reservationFloor;
 
-    [SerializeField] List<Room> suitableRooms; 
+    [SerializeField] List<Room> suitableRooms;
+    Dictionary<Reservation, Room> madeReservations;
+    Reservation editReservation = null;
+    Room editReservationRoom = null;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +26,7 @@ public class CompleteHandler : MonoBehaviour
         if (instance != null) Destroy(this);
         else
         {
+            madeReservations = new Dictionary<Reservation, Room>();
             for (int i = 0; i < rooms.Count; ++i)
             {
                 rooms[i].Init();
@@ -67,6 +71,7 @@ public class CompleteHandler : MonoBehaviour
         this.reservationFloor = floor;
         Debug.Log("Set reservation: " + requestedReservation.ToString());
         FindSuitableReservations();
+        if (suitableRooms.Count == 0) Debug.Log("none available");
     }
 
     public void FindSuitableReservations()
@@ -77,7 +82,7 @@ public class CompleteHandler : MonoBehaviour
             if (reservationFloor != -1 && rooms[i].floor != reservationFloor) continue;
             if (reservationBuilding != Building.ANY && rooms[i].building != reservationBuilding) continue; // room is not in the right building/floor
             if (reservationRoomSize > rooms[i].size) continue; //room is not big enough
-
+            
             if (reservationItems == null || reservationItems.Count <= 0)
             {
                 bool containsEveryItem = true;
@@ -113,7 +118,7 @@ public class CompleteHandler : MonoBehaviour
             suitableRooms.Add(room);
             
             List<Reservation> availableTimes = rooms[i].GetAvailableReservationsForDate(requestedReservation.startTime.Date);
-
+            
             if (availableTimes == null || availableTimes.Count <= 0)
             {
                 suitableRooms.Remove(room);
@@ -158,6 +163,24 @@ public class CompleteHandler : MonoBehaviour
         return suitableRooms;
     }
 
+    public void SetEditReservation(Reservation res, Room room)
+    {
+        editReservation = res;
+        editReservationRoom = room;
+        DeleteReservation(res);
+        SetReservation(res, room.size, room.building, room.floor, room.availableItems);
+    }
+
+    public bool GetEditReservation(out Reservation res, out Room room)
+    {
+        res = null;
+        room = null;
+        if (editReservation == null) return false;
+        res = editReservation;
+        room = editReservationRoom;
+        return true;
+    }
+
     public static CompleteHandler GetInstance()
     {
         if(instance == null)
@@ -176,6 +199,16 @@ public class CompleteHandler : MonoBehaviour
             room.reservations.Add(res.startTime.Date, new List<Reservation>());
         }
         room.reservations[res.startTime.Date].Add(res);
+        madeReservations.Add(res, room);
+    }
+
+    public void DeleteReservation(Reservation reservation)
+    {
+        if (!madeReservations.ContainsKey(reservation)) return;
+        Room room = madeReservations[reservation];
+        room.reservations[reservation.startTime.Date].Remove(reservation);
+        madeReservations.Remove(reservation);
+        Debug.Log("removed reservation, new count is" + madeReservations.Count);
     }
 
     public Room GetRoomWithNumber(string nr)
@@ -187,5 +220,23 @@ public class CompleteHandler : MonoBehaviour
             if (rooms[i].roomNumber == nr) return rooms[i];
         }
         return null;
+    }
+
+    public Dictionary<Reservation, Room> GetMadeReservations()
+    {
+        return madeReservations;
+    }
+
+    public List<Reservation> GetMadeReservationsAsList()
+    {
+        if (madeReservations == null || madeReservations.Count == 0) return null;
+        List<Reservation> res = new List<Reservation>();
+
+        foreach(Reservation reservation in madeReservations.Keys)
+        {
+            res.Add(reservation);
+        }
+
+        return res;
     }
 }
