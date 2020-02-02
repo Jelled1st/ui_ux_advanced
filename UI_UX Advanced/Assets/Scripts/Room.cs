@@ -120,6 +120,9 @@ public class Room : ScriptableObject
 
     public List<Reservation> GetAvailableReservationsForDate(DateTime pDate)
     {
+        if (!reservations.ContainsKey(pDate.Date)) return null;
+
+        reservations[pDate.Date].Sort();
         List<Reservation> output = new List<Reservation>();
         if (reservations.ContainsKey(pDate.Date))
         {

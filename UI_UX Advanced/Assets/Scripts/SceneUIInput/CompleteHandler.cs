@@ -21,13 +21,16 @@ public class CompleteHandler : MonoBehaviour
     void Start()
     {
         if (instance != null) Destroy(this);
-        for(int i = 0; i < rooms.Count; ++i)
+        else
         {
-            rooms[i].Init();
+            for (int i = 0; i < rooms.Count; ++i)
+            {
+                rooms[i].Init();
+            }
+            suitableRooms = new List<Room>();
+            DontDestroyOnLoad(this.gameObject);
+            instance = this;
         }
-        suitableRooms = new List<Room>();
-        DontDestroyOnLoad(this.gameObject);
-        instance = this;
     }
 
     // Update is called once per frame
@@ -39,6 +42,18 @@ public class CompleteHandler : MonoBehaviour
             DateTime start = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 10, 30, 0);
             DateTime end = start.AddHours(1);
             SetReservation(new Reservation("VRZ", start, end), RoomSize.ANY);
+        }
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            DateTime t = DateTime.Today;
+            for (int i = 0; i < rooms.Count; ++i)
+            {
+                Reservation[] res = rooms[i].reservations[t.Date].ToArray();
+                for(int j = 0; j < res.Length; ++j)
+                {
+                    Debug.Log(rooms[i].ToString() + " reservation " + j + ":" + res[j].ToString());
+                }
+            }
         }
     }
 
@@ -56,6 +71,7 @@ public class CompleteHandler : MonoBehaviour
 
     public void FindSuitableReservations()
     {
+        suitableRooms.Clear();
         for (int i = 0; i < rooms.Count; ++i)
         {
             if (reservationFloor != -1 && rooms[i].floor != reservationFloor) continue;
@@ -149,6 +165,17 @@ public class CompleteHandler : MonoBehaviour
             instance = new CompleteHandler();
         }
         return instance;
+    }
+
+    public void CreateReservation(Reservation res, Room pRoom)
+    {
+        Room room = GetRoomWithNumber(pRoom.roomNumber);
+        Debug.Log("existing room: " + room.ToString());
+        if(!room.reservations.ContainsKey(res.startTime.Date))
+        {
+            room.reservations.Add(res.startTime.Date, new List<Reservation>());
+        }
+        room.reservations[res.startTime.Date].Add(res);
     }
 
     public Room GetRoomWithNumber(string nr)

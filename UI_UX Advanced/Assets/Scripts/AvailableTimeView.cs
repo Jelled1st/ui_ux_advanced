@@ -37,7 +37,7 @@ public class AvailableTimeView : MonoBehaviour
         day.text = reservation.startTime.DayOfWeek.ToString();
         date.text = reservation.startTime.Day + " " + Helper.MonthToString(reservation.startTime.Month);
         roomNumber.text = room.roomNumber;
-        time.text = reservation.startTime.Hour + ":" + reservation.startTime.Minute + " - " + reservation.endTime.Hour + ":" + reservation.endTime.Minute;
+        time.text = Helper.HourMinToString(reservation.startTime.Hour, reservation.startTime.Minute) + " - " + Helper.HourMinToString(reservation.endTime.Hour, reservation.endTime.Minute);
         TimeSpan timeframe = reservation.endTime - reservation.startTime;
         charsAndTimeFrame.text = "36 | " + timeframe.Hours + ":" + timeframe.Minutes;
     }

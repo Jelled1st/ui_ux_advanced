@@ -75,12 +75,19 @@ public class SelectAvailableTimeSlot : MonoBehaviour
     public void OnReserve()
     {
         Reservation timeSlot = timeInput.GetSelectedTime();
-        Room room = CompleteHandler.GetInstance().GetRoomWithNumber(selectedTime.room.roomNumber);
-        if(!room.reservations.ContainsKey(timeSlot.startTime.Date))
-        {
-            room.reservations.Add(timeSlot.startTime.Date, new List<Reservation>());
-        }
-        room.reservations[timeSlot.startTime.Date].Add(timeSlot);
+        Room room = selectedTime.room;
+        //Room room = CompleteHandler.GetInstance().GetRoomWithNumber(selectedTime.room.roomNumber);
+        //if(!room.reservations.ContainsKey(timeSlot.startTime.Date))
+        //{
+        //    room.reservations.Add(timeSlot.startTime.Date, new List<Reservation>());
+        //}
+        //room.reservations[timeSlot.startTime.Date].Add(timeSlot);
         Debug.Log("made reservation in room: " + room.roomNumber + " with reservation:\n" + timeSlot.ToString());
+        CompleteHandler.GetInstance().CreateReservation(timeSlot, room);
+        for(int i = 0; i < availableTimeViews.Count; ++i)
+        {
+            Destroy(availableTimeViews[i]);
+        }
+        availableTimeViews.Clear();
     }
 }

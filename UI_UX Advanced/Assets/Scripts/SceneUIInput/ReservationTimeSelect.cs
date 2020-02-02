@@ -41,7 +41,7 @@ public class ReservationTimeSelect : MonoBehaviour
         //dayDateText = Thursday 20 February 2020
         dayDateText.text = "" + reservation.startTime.DayOfWeek.ToString() + " " + reservation.startTime.Day + " " + Helper.MonthToString(reservation.startTime.Month) + " " + reservation.startTime.Year;
         //timeText = 11:45 - 14:00
-        timeText.text = "" + reservation.startTime.Hour + ":" + reservation.startTime.Minute + " - " + reservation.endTime.Hour + ":" + reservation.endTime.Minute;
+        timeText.text = "" + Helper.HourMinToString(reservation.startTime.Hour, reservation.startTime.Minute) + " - " + Helper.HourMinToString(reservation.endTime.Hour, reservation.endTime.Minute);
     }
 
     public void SetRoomTimeUI(Room room, Reservation res)
