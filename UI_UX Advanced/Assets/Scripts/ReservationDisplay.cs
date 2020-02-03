@@ -29,11 +29,15 @@ public class ReservationDisplay : MonoBehaviour
         
     }
 
-    public void Set(Room pRoom, Reservation res)
+    public void Set(Room pRoom, Reservation res, GameObject popUp, Button pDeleteButton)
     {
         this.room = pRoom;
         reservation = res;
         deleteButton.onClick.AddListener(
+            delegate {
+                popUp.SetActive(true);
+            });
+        pDeleteButton.onClick.AddListener(
             delegate
             {
                 CompleteHandler.GetInstance().DeleteReservation(reservation);

@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class DisplayMadeReservations : MonoBehaviour
 {
     List<ReservationDisplay> reservationDisplays;
     [FormerlySerializedAs("reservationDisplay")][SerializeField] GameObject reservationDisplayPrefab;
+    [SerializeField] GameObject deleteResPopUp;
+    [SerializeField] Button deleteButton;
 
     // Start is called before the first frame update
     void Start()
@@ -64,7 +67,7 @@ public class DisplayMadeReservations : MonoBehaviour
         GameObject displayGo = GameObject.Instantiate(reservationDisplayPrefab, this.gameObject.transform);
         ReservationDisplay display = displayGo.GetComponent<ReservationDisplay>();
         reservationDisplays.Add(display);
-        display.Set(room, res);
+        display.Set(room, res, deleteResPopUp, deleteButton);
         display.SetText();
 
         float width = display.GetSize().x;
