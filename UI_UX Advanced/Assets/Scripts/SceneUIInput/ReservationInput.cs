@@ -22,6 +22,8 @@ public class ReservationInput : MonoBehaviour
     [SerializeField] Dropdown buildingDropdown;
     [SerializeField] Dropdown floorDropdown;
 
+    [SerializeField] GameObject invalidDatePopUp;
+
     RoomSize roomSize = RoomSize.TEAMSIZE;
     Building building = Building.ANY;
     int floor = 0;
@@ -104,8 +106,12 @@ public class ReservationInput : MonoBehaviour
                     {
                         if (Int32.TryParse(min0Txt.text, out min))
                         {
-                            dateTime = new DateTime(year, month, day, hour, min, 0);
-                            return true;
+                            if (Helper.isValidDateTime(year, month, day, hour, min, 0))
+                            {
+                                dateTime = new DateTime(year, month, day, hour, min, 0);
+                                return true;
+                            }
+                            else invalidDatePopUp.SetActive(true);
                         }
                     }
                 }
@@ -134,8 +140,12 @@ public class ReservationInput : MonoBehaviour
                     {
                         if (Int32.TryParse(min1Txt.text, out min))
                         {
-                            dateTime = new DateTime(year, month, day, hour, min, 0);
-                            return true;
+                            if (Helper.isValidDateTime(year, month, day, hour, min, 0))
+                            {
+                                dateTime = new DateTime(year, month, day, hour, min, 0);
+                                return true;
+                            }
+                            else invalidDatePopUp.SetActive(true);
                         }
                     }
                 }

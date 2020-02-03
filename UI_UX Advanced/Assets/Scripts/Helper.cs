@@ -62,4 +62,26 @@ public static class Helper
 
         return ret;
     }
+
+    public static bool IsValidDate(int year, int month, int day)
+    {
+        DateTime t = DateTime.Today;
+        if (year < t.Year) return false;
+        if (month < 1 || month > 12) return false;
+        if (day < 1 || day > 31) return false;
+        return true;
+    }
+
+    public static bool isValidTime(int hour, int min, int sec)
+    {
+        if (hour < 0 || hour > 24) return false;
+        if (min < 0 || min > 60) return false;
+        if (sec < 0 || sec > 60) return false;
+        return true;
+    }
+
+    public static bool isValidDateTime(int year, int month, int day, int hour, int min, int sec)
+    {
+        return IsValidDate(year, month, day) && isValidTime(hour, min, sec);
+    }
 }
